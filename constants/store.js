@@ -1,7 +1,7 @@
 export const Store = {
-    name: "MiltecTek",
+    name: "Клікоманія",
     currency: "UAH",
     currency_sign: "₴",
     domain: "https://fo-scandinavia.vercel.app",
-    database: "MiltecTek"
+    database: "Klikomania"
 }
