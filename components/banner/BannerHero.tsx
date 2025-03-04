@@ -20,7 +20,7 @@ export default function BannerHero() {
             </h1>
             <p className="text-body-medium text-green-100 max-w-xl">
               Відкрийте для себе якісні аксесуари та корми для вашого домашнього улюбленця, які забезпечать йому
-              комфорт, здоров'я та радість.
+              комфорт, здоров&apos;я та радість.
             </p>
             <div className="flex gap-4 max-[600px]:flex-col">
               <Button
