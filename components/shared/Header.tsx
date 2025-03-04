@@ -47,7 +47,7 @@ export default function Header({ email, user }: { email: string; user: string })
 
   return (
     <header ref={headerRef} className="w-full min-w-[320px] h-20 flex justify-center items-center">
-      <div className="w-full max-w-[1680px] h-full flex justify-between items-center bg-green-900 px-5 max-[600px]:px-9 max-[500px]:px-7">
+      <div className="w-full max-w-[1680px] h-full flex justify-between items-center bg-neutral-900 px-5 max-[600px]:px-9 max-[500px]:px-7">
         <div className="size-5 hidden max-lg:flex"></div>
         <div>
           <Link href="/" className="w-fit flex gap-2 justify-center items-center">
