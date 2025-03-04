@@ -35,7 +35,7 @@ export default function AboutUs() {
             >
               <h2 className="text-heading1-bold text-green-900">Про {Store.name}</h2>
               <p className="text-body-medium text-green-700">
-                Ми ретельно підбираємо асортимент, який поєднує якість, комфорт та турботу про здоров'я вашого
+                Ми ретельно підбираємо асортимент, який поєднує якість, комфорт та турботу про здоров&apos;я вашого
                 улюбленця. Наші товари та аксесуари створені для тих, хто цінує найкраще для своїх домашніх тварин.
               </p>
               <div className="space-y-6">
@@ -79,7 +79,7 @@ export default function AboutUs() {
                 <Image src="/assets/about-us.jpeg" alt="Щасливі домашні улюбленці" fill className="object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 w-48 h-48 border border-green-200 rounded-lg flex items-center justify-center p-4 bg-white/80 backdrop-blur-sm">
-                <p className="text-center text-base-semibold text-green-800">Турбота про ваших улюбленців з любов'ю</p>
+                <p className="text-center text-base-semibold text-green-800">Турбота про ваших улюбленців з любов&apos;ю</p>
               </div>
             </motion.div>
           </div>

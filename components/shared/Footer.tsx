@@ -42,7 +42,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link href="/support/contact" className="text-base-regular hover:text-emerald-400 transition-colors">
-                  Зв'язатися з нами
+                  Зв&apos;язатися з нами
                 </Link>
               </li>
               <li>
@@ -86,7 +86,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link href="/products/health" className="text-base-regular hover:text-emerald-400 transition-colors">
-                  Здоров'я та гігієна
+                  Здоров&apos;я та гігієна
                 </Link>
               </li>
             </ul>
