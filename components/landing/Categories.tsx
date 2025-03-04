@@ -6,9 +6,9 @@ import Link from "next/link"
 import Image from "next/image"
 
 const categories = [
-  { name: "Штани", image: "/assets/1.jpg", href: "/catalog" },
-  { name: "Кепки", image: "/assets/2.jpg", href: "/catalog" },
-  { name: "Куртки", image: "/assets/3.jpg", href: "/catalog" },
+  { name: "Smartphones", image: "/assets/1.jpg", href: "/catalog" },
+  { name: "Laptops", image: "/assets/2.jpg", href: "/catalog" },
+  { name: "Accessories", image: "/assets/3.jpg", href: "/catalog" },
 ]
 
 export default function Categories() {
@@ -19,7 +19,7 @@ export default function Categories() {
   return (
     <motion.section
       ref={sectionRef}
-      className="w-full py-24 bg-neutral-100"
+      className="w-full py-24 bg-zinc-100"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.8 }}
@@ -31,10 +31,10 @@ export default function Categories() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h2 className="text-heading1-bold text-neutral-900 mb-4">Надійність у кожній деталі</h2>
-          <div className="w-24 h-1 bg-neutral-900 mx-auto mb-6" />
-          <p className="text-body-semibold text-neutral-600 max-w-2xl mx-auto">
-            Оберіть екіпірування, що поєднує комфорт, міцність та витривалість.
+          <h2 className="text-heading1-bold text-zinc-900 mb-4">Explore Our Tech</h2>
+          <div className="w-24 h-1 bg-sky-500 mx-auto mb-6" />
+          <p className="text-body-semibold text-zinc-600 max-w-2xl mx-auto">
+            Discover our curated selection of cutting-edge devices and accessories
           </p>
         </motion.div>
 
@@ -50,26 +50,25 @@ export default function Categories() {
               className="relative group"
             >
               <Link href={category.href} className="block">
-                <div className="relative aspect-[4/5] overflow-hidden">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
                   <Image
                     src={category.image || "/placeholder.svg"}
                     alt={category.name}
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-700 ease-in-out group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60" />
+                  <div className="absolute inset-0 bg-zinc-900 bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-60" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-8">
                     <h3 className="text-heading3-bold text-white text-center mb-4 transform transition-transform duration-300 group-hover:translate-y-[-10px]">
                       {category.name}
                     </h3>
                     <motion.span
-                      className="text-small-semibold uppercase tracking-wider text-white border border-white px-4 py-2"
+                      className="text-small-semibold uppercase tracking-wider text-white border border-sky-400 bg-sky-500/20 px-4 py-2 rounded"
                       initial={{ opacity: 0, y: 20 }}
                       animate={hoveredIndex === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                       transition={{ duration: 0.3 }}
                     >
-                      Переглянути
+                      Shop Now
                     </motion.span>
                   </div>
                 </div>
@@ -86,13 +85,14 @@ export default function Categories() {
         >
           <Link
             href="/catalog"
-            className="inline-block text-base-semibold text-neutral-900 hover:text-neutral-700 transition-colors duration-300 relative group"
+            className="inline-block text-base-semibold text-zinc-900 hover:text-sky-600 transition-colors duration-300 relative group"
           >
-            <span className="relative z-10">Дивитися всі категорії</span>
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-neutral-900 transform origin-left transition-all duration-300 group-hover:scale-x-100 scale-x-0"></span>
+            <span className="relative z-10">View All Products</span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-sky-500 transform origin-left transition-all duration-300 group-hover:scale-x-100 scale-x-0"></span>
           </Link>
         </motion.div>
       </div>
     </motion.section>
   )
 }
+

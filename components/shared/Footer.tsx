@@ -1,7 +1,10 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import { Store } from "@/constants/store"
+import { motion } from "framer-motion"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -28,76 +31,144 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-gradient-to-b from-dark-4 to-black text-white z-40 pt-16 pb-8 w-full min-w-[320px]">
-      <div
+    <footer className="bg-gradient-to-b from-zinc-900 to-zinc-950 text-white z-40 pt-16 pb-8 w-full min-w-[320px]">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
         className="max-w-screen-2xl mx-auto px-4 lg:px-8 w-full"
-
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          <div className="w-full">
-            <h3 className="text-lg font-semibold mb-4">Фіз. особам</h3>
+          <motion.div variants={itemVariants} className="w-full">
+            <h3 className="text-heading4-medium mb-4">Customer Support</h3>
             <ul className="space-y-2">
-              <li><Link href='info/contacts' className="hover:text-blue-400 transition-colors">Контакти</Link></li>
-              <li><Link href='info/delivery-payment' className="hover:text-blue-400 transition-colors">Доставка та оплата</Link></li>
-              <li><Link href='info/warranty-services' className="hover:text-blue-400 transition-colors">Гарантія та сервіс</Link></li>
+              <li>
+                <Link href="/support/contact" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/support/shipping" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Shipping & Returns
+                </Link>
+              </li>
+              <li>
+                <Link href="/support/warranty" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Warranty & Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/support/faq" className="text-base-regular hover:text-sky-400 transition-colors">
+                  FAQ
+                </Link>
+              </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="w-full">
-            <h3 className="text-lg font-semibold mb-4">Дизайн</h3>
+          <motion.div variants={itemVariants} className="w-full">
+            <h3 className="text-heading4-medium mb-4">Products</h3>
             <ul className="space-y-2">
-              <li><Link href='/presentations' className="hover:text-blue-400 transition-colors">Презентації</Link></li>
+              <li>
+                <Link href="/products/smartphones" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Smartphones
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/laptops" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Laptops
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/accessories" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Accessories
+                </Link>
+              </li>
+              <li>
+                <Link href="/products/smart-home" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Smart Home
+                </Link>
+              </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="w-full">
-            <h3 className="text-lg font-semibold mb-4">Каталоги</h3>
+          <motion.div variants={itemVariants} className="w-full">
+            <h3 className="text-heading4-medium mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link href='/catalog' className="hover:text-blue-400 transition-colors">Одяг</Link></li>
-              <li><Link href='/catalog' className="hover:text-blue-400 transition-colors">Одяг</Link></li>
-              <li><Link href='/catalog' className="hover:text-blue-400 transition-colors">Одяг</Link></li>
+              <li>
+                <Link href="/about" className="text-base-regular hover:text-sky-400 transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/partners" className="text-base-regular hover:text-sky-400 transition-colors">
+                  Partners
+                </Link>
+              </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="w-full">
-            <h3 className="text-lg font-semibold mb-4">Контакти</h3>
-            <p className="mb-2">Phone:</p>
-            <p className="mb-4">Email: </p>
-            <h4 className="text-lg font-semibold mb-2">Ми в соцмережах</h4>
+          <motion.div variants={itemVariants} className="w-full">
+            <h3 className="text-heading4-medium mb-4">Contact</h3>
+            <p className="text-base-regular mb-2">Phone: 1-800-TECH-STORE</p>
+            <p className="text-base-regular mb-4">Email: support@techstore.com</p>
+            <h4 className="text-base-semibold mb-2">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-blue-400 transition-colors">
-                <Facebook size={24} />
+              <a href="#" className="text-white hover:text-sky-400 transition-colors">
+                <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white hover:text-pink-400 transition-colors">
-                <Instagram size={24} />
+              <a href="#" className="text-white hover:text-sky-400 transition-colors">
+                <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-white hover:text-blue-600 transition-colors">
-                <Linkedin size={24} />
+              <a href="#" className="text-white hover:text-sky-400 transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-white hover:text-sky-400 transition-colors">
+                <Linkedin className="w-5 h-5" />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div
-          
-          className="border-t border-gray-700 pt-8 mt-8 w-full"
-        >
+        <motion.div variants={itemVariants} className="border-t border-zinc-800 pt-8 mt-8 w-full">
           <div className="flex flex-col lg:flex-row justify-between items-center">
-            <p className="text-sm text-gray-400 mb-4 lg:mb-0 text-center lg:text-left">
-              © {currentYear} <span className="font-semibold">{Store.name}</span>. Всі права захищені.
+            <p className="text-small-regular text-zinc-400 mb-4 lg:mb-0 text-center lg:text-left">
+              © {currentYear} <span className="font-semibold">{Store.name}</span>. All rights reserved.
             </p>
             <div className="flex flex-col items-center lg:items-end space-y-2 lg:space-y-0">
-              <span className="text-sm text-gray-400 text-center lg:text-right">Солодко</span>
-              <div className="flex space-x-2 mt-2 lg:mt-1">
-                <Image className="h-6 w-auto" width={88} height={18} src='/assets/botticelli.png' alt='Botticelli logo' />
-                <Image className="h-6 w-auto" width={55} height={18} src='/assets/juventa.png' alt='Juventa logo' />
+              <span className="text-small-regular text-zinc-400 text-center lg:text-right">Secure payments by</span>
+              <div className="flex space-x-4 mt-2 lg:mt-1">
+                {/* <Image
+                  className="h-6 w-auto"
+                  width={50}
+                  height={24}
+                  src="/placeholder.svg?height=24&width=50"
+                  alt="Payment method 1"
+                />
+                <Image
+                  className="h-6 w-auto"
+                  width={50}
+                  height={24}
+                  src="/placeholder.svg?height=24&width=50"
+                  alt="Payment method 2"
+                /> */}
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </footer>
   )
 }
 
 export default Footer
+

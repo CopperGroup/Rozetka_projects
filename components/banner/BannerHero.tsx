@@ -3,37 +3,36 @@ import { Button } from "@/components/ui/button"
 
 export default function BannerHero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative w-full h-screen overflow-hidden bg-zinc-900">
       <Image
         src="/assets/banner-hero.jpg"
-        alt="Military tactical wear"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
+        alt="Modern tech devices showcase"
+        fill
         priority
-        className="opacity-70"
+        className="object-cover opacity-60"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent">
+      <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-zinc-900/80 to-zinc-900/40">
         <div className="container mx-auto h-full flex items-center">
-          <div className="max-w-2xl space-y-8">
-            <h1 className="font-bold text-white max-[1380px]:text-[72px] max-[1380px]:leading-[81px] max-[1260px]:text-[64px] max-[1260px]:leading-[72px] max-[1130px]:text-[60px] max-[1130px]:leading-[67px] max-[1070px]:text-[56px] max-[1070px]:leading-[63px] max-[360px]:text-[50px] max-[360px]:leading-[55px] max-[350px]:text-[47px] max-[350px]:leading-[52px] max-[330px]:text-[44px] max-[330px]:leading-[49px]">
-              Міцність та
+          <div className="max-w-2xl space-y-6">
+            <h1 className="text-heading1-bold text-white sm:text-[56px] md:text-[64px] lg:text-[72px]">
+              Next-Gen
               <br />
-              <span className="text-neutral-300">Зручність</span>
+              <span className="text-blue-400">Tech & Innovation</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 max-w-xl">
-              Відкрийте екіпірування для тих, хто цінує якість, надійність та сучасні військовий стандарти.
+            <p className="text-body-medium text-zinc-300 max-w-xl">
+              Discover cutting-edge devices designed for those who demand performance, innovation, and seamless
+              integration.
             </p>
             <div className="flex gap-4 max-[465px]:flex-col">
-              <Button size="lg" className="bg-white text-black rounded-none hover:bg-neutral-200 px-8 py-6 text-lg">
-                Замовити
+              <Button size="lg" className="bg-sky-500 hover:bg-sky-600 px-8 py-6 text-base-semibold text-white">
+                Shop Devices
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="text-white border-white rounded-none hover:bg-white/10 px-8 py-6 text-lg"
+                className="border-sky-400 hover:bg-sky-500/10 px-8 py-6 text-base-semibold text-white"
               >
-                Дивитися колекцію
+                Explore Tech
               </Button>
             </div>
           </div>
@@ -42,3 +41,4 @@ export default function BannerHero() {
     </section>
   )
 }
+

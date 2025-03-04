@@ -17,7 +17,7 @@ const LinkButton = ({ children, href, className, type, ...props }: Props) => {
   return (
     <TransitionLink href={href} {...props} type={"left"}>
       <motion.div
-        className={cn(`relative w-fit h-fit flex justify-center items-center font-medium gap-2 border border-black rounded-none px-4 py-2 overflow-hidden ${type === "white" ? "border-white bg-white" : "border-black"}`, className)}
+        className={cn(`relative w-fit h-fit flex justify-center items-center font-medium gap-2 rounded-none px-4 py-2 overflow-hidden ${type === "white" ? "border-white bg-white" : "border-black"}`, className)}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         onMouseDown={() => setIsHovered(true)}
@@ -33,7 +33,7 @@ const LinkButton = ({ children, href, className, type, ...props }: Props) => {
         <motion.p
           className="relative z-10"
           animate={{ 
-            color: isHovered ? `#ffffff` : `#000000`,
+            color: isHovered ? `#ffffff` : `#ffffff`,
             transform: isHovered ? "translateX(30px)" : "translateX(0px)" 
           }}
         >
@@ -48,7 +48,7 @@ const LinkButton = ({ children, href, className, type, ...props }: Props) => {
           }}
           transition={{ duration: 0.3 }}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke={"#000000"}className="size-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke={"#ffffff"}className="size-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
           </svg>
         </motion.div>
