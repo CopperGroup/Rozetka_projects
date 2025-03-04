@@ -5,3 +5,5 @@ export const Store = {
     domain: "https://fo-scandinavia.vercel.app",
     database: "Klikomania"
 }
+
+
